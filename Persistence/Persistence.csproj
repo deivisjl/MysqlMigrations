@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D629F07-389F-44AC-9AA4-4C249B978455}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Persistence</RootNamespace>
+    <AssemblyName>Persistence</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.8\lib\net452\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.10.8\lib\net452\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\MySqlConfiguration.cs" />
+    <Compile Include="Config\MySqlInitializer.cs" />
+    <Compile Include="Migrations\201808221549286_Initialize.cs" />
+    <Compile Include="Migrations\201808221549286_Initialize.Designer.cs">
+      <DependentUpon>201808221549286_Initialize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221600466_SprintV1.cs" />
+    <Compile Include="Migrations\201808221600466_SprintV1.Designer.cs">
+      <DependentUpon>201808221600466_SprintV1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221606120_SprintV2.cs" />
+    <Compile Include="Migrations\201808221606120_SprintV2.Designer.cs">
+      <DependentUpon>201808221606120_SprintV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221614069_SprintV3.cs" />
+    <Compile Include="Migrations\201808221614069_SprintV3.Designer.cs">
+      <DependentUpon>201808221614069_SprintV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221633488_SprintV4.cs" />
+    <Compile Include="Migrations\201808221633488_SprintV4.Designer.cs">
+      <DependentUpon>201808221633488_SprintV4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221704597_SprintV5.cs" />
+    <Compile Include="Migrations\201808221704597_SprintV5.Designer.cs">
+      <DependentUpon>201808221704597_SprintV5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221721362_SprintV6.cs" />
+    <Compile Include="Migrations\201808221721362_SprintV6.Designer.cs">
+      <DependentUpon>201808221721362_SprintV6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221741483_SprintV7.cs" />
+    <Compile Include="Migrations\201808221741483_SprintV7.Designer.cs">
+      <DependentUpon>201808221741483_SprintV7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221757136_SprintV8.cs" />
+    <Compile Include="Migrations\201808221757136_SprintV8.Designer.cs">
+      <DependentUpon>201808221757136_SprintV8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221801558_SprintV9.cs" />
+    <Compile Include="Migrations\201808221801558_SprintV9.Designer.cs">
+      <DependentUpon>201808221801558_SprintV9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808221803054_SprintV10.cs" />
+    <Compile Include="Migrations\201808221803054_SprintV10.Designer.cs">
+      <DependentUpon>201808221803054_SprintV10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Alumno.cs" />
+    <Compile Include="Models\Bimestre.cs" />
+    <Compile Include="Models\Calificacion.cs" />
+    <Compile Include="Models\Carrera.cs" />
+    <Compile Include="Models\CicloEscolar.cs" />
+    <Compile Include="Models\Curso.cs" />
+    <Compile Include="Models\CursoProfesor.cs" />
+    <Compile Include="Models\Grado.cs" />
+    <Compile Include="Models\GradoCarrera.cs" />
+    <Compile Include="Models\Inscrito.cs" />
+    <Compile Include="Models\InscritoCurso.cs" />
+    <Compile Include="Models\Mes.cs" />
+    <Compile Include="Models\Nivel.cs" />
+    <Compile Include="Models\Pago.cs" />
+    <Compile Include="Models\Pensum.cs" />
+    <Compile Include="Models\PensumCurso.cs" />
+    <Compile Include="Models\Rol.cs" />
+    <Compile Include="Models\Salon.cs" />
+    <Compile Include="Models\Seccion.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="MysqlDbContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808221549286_Initialize.resx">
+      <DependentUpon>201808221549286_Initialize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221600466_SprintV1.resx">
+      <DependentUpon>201808221600466_SprintV1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221606120_SprintV2.resx">
+      <DependentUpon>201808221606120_SprintV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221614069_SprintV3.resx">
+      <DependentUpon>201808221614069_SprintV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221633488_SprintV4.resx">
+      <DependentUpon>201808221633488_SprintV4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221704597_SprintV5.resx">
+      <DependentUpon>201808221704597_SprintV5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221721362_SprintV6.resx">
+      <DependentUpon>201808221721362_SprintV6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221741483_SprintV7.resx">
+      <DependentUpon>201808221741483_SprintV7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221757136_SprintV8.resx">
+      <DependentUpon>201808221757136_SprintV8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221801558_SprintV9.resx">
+      <DependentUpon>201808221801558_SprintV9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221803054_SprintV10.resx">
+      <DependentUpon>201808221803054_SprintV10.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
